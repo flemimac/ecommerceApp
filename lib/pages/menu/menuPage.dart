@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../designs/styles.dart';
+import 'widgets/hotSales.dart';
 import 'widgets/searchBar.dart';
 import 'widgets/selectCategory.dart';
 
@@ -27,10 +29,7 @@ class _MenuPageState extends State<MenuPage> {
             ),
             Text(
               'Zihuatanejo, Gro',
-              style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 15,
-                  fontFamily: 'MarkPro'),
+              style: appBarTextStyle,
             ),
             InkWell(
               onTap: () {},
@@ -46,6 +45,7 @@ class _MenuPageState extends State<MenuPage> {
           children: <Widget>[
             SelectCategory(),
             SearchBarWidget(),
+            HotSales(),
           ],
         ),
       ),
