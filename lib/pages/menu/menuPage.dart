@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../../designs/styles.dart';
-import 'widgets/hotSales.dart';
-import 'widgets/searchBar.dart';
-import 'widgets/selectCategory.dart';
+import 'widgets/widgets.dart';
+// import 'widgets/bestSeller.dart';
+// import 'widgets/hotSales.dart';
+// import 'widgets/searchBar.dart';
+// import 'widgets/selectCategory.dart';
 
 class MenuPage extends StatefulWidget {
   MenuPage({super.key});
@@ -38,16 +40,19 @@ class _MenuPageState extends State<MenuPage> {
           ],
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(15),
-        child: Column(
-          spacing: 30,
-          children: <Widget>[
-            SelectCategory(),
-            SearchBarWidget(),
-            HotSales(),
-          ],
-        ),
+      body: ListView(
+        padding: EdgeInsets.all(15),
+        children: [
+          Column(
+            spacing: 30,
+            children: <Widget>[
+              SelectCategory(),
+              SearchBarWidget(),
+              HotSales(),
+              BestSeller(),
+            ],
+          ),
+        ],
       ),
     );
   }

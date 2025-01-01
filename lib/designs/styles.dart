@@ -29,6 +29,30 @@ const TextStyle bodyTextStyle = TextStyle(
 const TextStyle categoryTextStyle = TextStyle(
   fontWeight: FontWeight.w500,
   fontSize: 12,
+  fontFamily: 'MarkPro',
   letterSpacing: -0.33,
   color: secondaryColor,
+);
+
+const TextStyle headSaleTextStyle = TextStyle(
+  color: Colors.white,
+  fontSize: 24,
+  fontWeight: FontWeight.w700,
+  fontFamily: 'MarkPro',
+  letterSpacing: -0.33,
+);
+
+const TextStyle bodySaleTextStyle = TextStyle(
+  color: Colors.white,
+  fontSize: 12,
+  fontWeight: FontWeight.w400,
+  fontFamily: 'MarkPro',
+  letterSpacing: -0.33,
+);
+
+const TextStyle buttonSaleTextStyle = TextStyle(
+  fontSize: 12,
+  fontWeight: FontWeight.w700,
+  color: primaryColor,
+  letterSpacing: -0.33,
 );

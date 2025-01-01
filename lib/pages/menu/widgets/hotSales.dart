@@ -9,6 +9,7 @@ class HotSales extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      spacing: 10,
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -24,6 +25,7 @@ class HotSales extends StatelessWidget {
           ],
         ),
         Stack(
+          alignment: Alignment.centerLeft,
           children: [
             SizedBox(
               width: MediaQuery.of(context).size.width,
@@ -33,8 +35,7 @@ class HotSales extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(top: 14, left: 25),
-              alignment: Alignment.centerLeft,
+              padding: EdgeInsets.only(left: 25),
               child: Column(
                 spacing: 12,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -64,23 +65,15 @@ class HotSales extends StatelessWidget {
                     children: [
                       Text(
                         'Iphone 12',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24,
-                          fontWeight: FontWeight.w700,
-                          fontFamily: 'MarkPro',
-                          letterSpacing: -0.33,
-                        ),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: headSaleTextStyle,
                       ),
                       Text(
                         'Súper. Mega. Rápido.',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400,
-                          fontFamily: 'MarkPro',
-                          letterSpacing: -0.33,
-                        ),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: bodySaleTextStyle,
                       ),
                     ],
                   ),
@@ -99,12 +92,7 @@ class HotSales extends StatelessWidget {
                       ),
                       child: Text(
                         'Buy now!',
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w700,
-                          color: primaryColor,
-                          letterSpacing: -0.33,
-                        ),
+                        style: buttonSaleTextStyle,
                       ),
                     ),
                   )
