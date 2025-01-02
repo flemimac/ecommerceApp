@@ -2,13 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../../designs/styles.dart';
 import 'widgets/widgets.dart';
-// import 'widgets/bestSeller.dart';
-// import 'widgets/hotSales.dart';
-// import 'widgets/searchBar.dart';
-// import 'widgets/selectCategory.dart';
 
 class MenuPage extends StatefulWidget {
-  MenuPage({super.key});
+  const MenuPage({super.key});
 
   @override
   State<MenuPage> createState() => _MenuPageState();
@@ -20,6 +16,7 @@ class _MenuPageState extends State<MenuPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         backgroundColor: Colors.white,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,

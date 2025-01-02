@@ -24,45 +24,51 @@ class BestSeller extends StatelessWidget {
             ),
           ],
         ),
-        // GridView.count(
-        //   crossAxisCount: 2,
-        //   mainAxisSpacing: 10,
-        //   crossAxisSpacing: 10,
-        //   children: [
-        //     _gridTile(),
-        //     _gridTile(),
-        //     _gridTile(),
-        //     _gridTile(),
-        //     _gridTile(),
-        //   ],
-        // ),
+        SizedBox(
+          height: 500,
+          child: GridView.count(
+            primary: false,
+            crossAxisCount: 2,
+            mainAxisSpacing: 10,
+            crossAxisSpacing: 10,
+            childAspectRatio: 0.85,
+            children: [
+              _gridTile(),
+              _gridTile(),
+              _gridTile(),
+              _gridTile(),
+            ],
+          ),
+        ),
       ],
     );
   }
 
   Widget _gridTile() {
     return Container(
-      height: 300,
-      width: 180,
+      height: 150,
+      padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: otherColor,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.3),
-              spreadRadius: 0.5,
-              blurRadius: 5,
-              offset: Offset(0, 2),
-            ),
-          ]),
-      child: Padding(
-        padding: const EdgeInsets.all(10),
-        child: Stack(
-          children: [
-            Column(
+        borderRadius: BorderRadius.circular(10),
+        color: otherColor,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.3),
+            spreadRadius: 0.5,
+            blurRadius: 5,
+            offset: Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Stack(
+        children: [
+          Image.asset('assets/images/samsungGalaxyS20.png'),
+          Positioned(
+            bottom: 0,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               spacing: 5,
               children: [
-                Image.asset('assets/images/samsungGalaxyS20.png'),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   spacing: 7,
@@ -102,32 +108,32 @@ class BestSeller extends StatelessWidget {
                 )
               ],
             ),
-            Container(
-              alignment: Alignment.topRight,
-              padding: EdgeInsets.only(top: 5, right: 5),
-              child: Container(
-                height: 35,
-                width: 35,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    color: otherColor,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.3),
-                        spreadRadius: 0.5,
-                        blurRadius: 5,
-                        offset: Offset(0, 2),
-                      ),
-                    ]),
-                child: Icon(
-                  Icons.heart_broken_outlined,
-                  color: secondaryColor,
-                  size: 20,
-                ),
+          ),
+          Positioned(
+            top: 5,
+            right: 5,
+            child: Container(
+              height: 35,
+              width: 35,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  color: otherColor,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.3),
+                      spreadRadius: 0.5,
+                      blurRadius: 5,
+                      offset: Offset(0, 2),
+                    ),
+                  ]),
+              child: Icon(
+                Icons.heart_broken_outlined,
+                color: secondaryColor,
+                size: 20,
               ),
-            )
-          ],
-        ),
+            ),
+          ),
+        ],
       ),
     );
   }
