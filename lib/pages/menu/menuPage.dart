@@ -1,5 +1,7 @@
+import 'package:ecommerce/designs/images.dart';
 import 'package:flutter/material.dart';
 
+import '../../designs/colors.dart';
 import '../../designs/styles.dart';
 import 'widgets/widgets.dart';
 
@@ -50,6 +52,44 @@ class _MenuPageState extends State<MenuPage> {
             ],
           ),
         ],
+      ),
+      bottomNavigationBar: Container(
+        height: 70,
+        decoration: BoxDecoration(
+          color: primaryColor,
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(30),
+            topLeft: Radius.circular(30),
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 75),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Explorer',
+                style: TextStyle(
+                    color: otherColor,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 16,
+                    letterSpacing: -0.33),
+              ),
+              InkWell(
+                onTap: () {},
+                child: bagIcon,
+              ),
+              InkWell(
+                onTap: () {},
+                child: heartOutlinedBottomNavIcon,
+              ),
+              InkWell(
+                onTap: () {},
+                child: mineIcon,
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

@@ -18,9 +18,13 @@ class HotSales extends StatelessWidget {
               'Hot sales',
               style: headTextStyle,
             ),
-            Text(
-              'see more',
-              style: bodyTextStyle,
+            InkWell(
+              borderRadius: BorderRadius.circular(10),
+              onTap: () {},
+              child: Text(
+                'see more',
+                style: bodyTextStyle,
+              ),
             ),
           ],
         ),
@@ -92,7 +96,7 @@ class HotSales extends StatelessWidget {
                       ),
                       child: Text(
                         'Buy now!',
-                        style: buttonSaleTextStyle,
+                        style: buttonTextStyle,
                       ),
                     ),
                   )

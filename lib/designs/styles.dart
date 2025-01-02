@@ -50,9 +50,34 @@ const TextStyle bodySaleTextStyle = TextStyle(
   letterSpacing: -0.33,
 );
 
-const TextStyle buttonSaleTextStyle = TextStyle(
+const TextStyle buttonTextStyle = TextStyle(
   fontSize: 12,
   fontWeight: FontWeight.w700,
   color: primaryColor,
   letterSpacing: -0.33,
+);
+
+const TextStyle newPriceTextStyle = TextStyle(
+  fontSize: 16,
+  letterSpacing: -0.33,
+  fontWeight: FontWeight.w700,
+  fontFamily: 'MarkPro',
+  color: primaryColor,
+);
+
+const TextStyle oldPriceTextStyle = TextStyle(
+  fontSize: 12,
+  letterSpacing: -0.33,
+  fontWeight: FontWeight.w500,
+  fontFamily: 'MarkPro',
+  color: Colors.grey,
+  decoration: TextDecoration.lineThrough,
+);
+
+const TextStyle descProductTextStyle = TextStyle(
+  fontSize: 12,
+  letterSpacing: -0.33,
+  fontWeight: FontWeight.w500,
+  fontFamily: 'MarkPro',
+  color: primaryColor,
 );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:ecommerce/designs/images.dart';
 import '../../../designs/colors.dart';
 import '../../../designs/styles.dart';
 
@@ -19,6 +20,7 @@ class SelectCategory extends StatelessWidget {
               style: headTextStyle,
             ),
             InkWell(
+              borderRadius: BorderRadius.circular(10),
               onTap: () {},
               child: Text(
                 'view all',
@@ -54,6 +56,7 @@ class SelectCategory extends StatelessWidget {
       child: Column(
         children: [
           InkWell(
+            borderRadius: BorderRadius.circular(50),
             onTap: () {},
             child: Container(
               width: 71,
@@ -70,11 +73,7 @@ class SelectCategory extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Icon(
-                color: otherColor,
-                Icons.phone_android_outlined,
-                size: 30,
-              ),
+              child: Center(child: phonesIcon),
             ),
           ),
           Text(

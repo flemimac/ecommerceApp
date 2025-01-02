@@ -1,4 +1,4 @@
-export 'selectCategory.dart';
-export 'searchBar.dart';
-export 'hotSales.dart';
-export 'bestSeller.dart';
+export 'selectCategory_widget.dart';
+export 'searchBar_widget.dart';
+export 'hotSales_widget.dart';
+export 'bestSeller_widget.dart';
