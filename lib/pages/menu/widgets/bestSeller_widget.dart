@@ -25,21 +25,15 @@ class BestSeller extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(
-          height: 500,
-          child: GridView.count(
-            primary: false,
-            crossAxisCount: 2,
-            mainAxisSpacing: 10,
-            crossAxisSpacing: 10,
-            childAspectRatio: 0.85,
-            children: [
-              _gridTile(context),
-              _gridTile(context),
-              _gridTile(context),
-              _gridTile(context),
-            ],
-          ),
+        Wrap(
+          spacing: 15,
+          runSpacing: 15,
+          children: [
+            _gridTile(context),
+            _gridTile(context),
+            _gridTile(context),
+            _gridTile(context),
+          ],
         ),
       ],
     );
@@ -48,6 +42,8 @@ class BestSeller extends StatelessWidget {
   Widget _gridTile(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(10),
+      height: 227,
+      width: 181,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: otherColor,

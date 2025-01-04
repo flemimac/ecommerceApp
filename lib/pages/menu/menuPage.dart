@@ -16,10 +16,10 @@ class _MenuPageState extends State<MenuPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: backgroundColor,
       appBar: AppBar(
         scrolledUnderElevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: backgroundColor,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           spacing: 8,
