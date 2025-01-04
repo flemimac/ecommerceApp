@@ -1,6 +1,6 @@
-import 'package:ecommerce/designs/images.dart';
 import 'package:flutter/material.dart';
 
+import '../../../designs/images.dart';
 import '../../../designs/colors.dart';
 import '../../../designs/styles.dart';
 
@@ -34,10 +34,10 @@ class BestSeller extends StatelessWidget {
             crossAxisSpacing: 10,
             childAspectRatio: 0.85,
             children: [
-              _gridTile(),
-              _gridTile(),
-              _gridTile(),
-              _gridTile(),
+              _gridTile(context),
+              _gridTile(context),
+              _gridTile(context),
+              _gridTile(context),
             ],
           ),
         ),
@@ -45,7 +45,7 @@ class BestSeller extends StatelessWidget {
     );
   }
 
-  Widget _gridTile() {
+  Widget _gridTile(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
@@ -61,7 +61,10 @@ class BestSeller extends StatelessWidget {
         ],
       ),
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          print('Detalis widget ');
+          Navigator.pushNamed(context, '/detalis');
+        },
         child: Stack(
           children: [
             Image.asset('assets/images/samsungGalaxyS20.png'),

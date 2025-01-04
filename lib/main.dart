@@ -1,3 +1,4 @@
+import 'package:ecommerce/pages/detalis/detalisPage.dart';
 import 'package:flutter/material.dart';
 
 import 'pages/menu/menuPage.dart';
@@ -14,7 +15,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Ecommerce',
       debugShowCheckedModeBanner: false,
-      home: MenuPage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => MenuPage(),
+        '/detalis': (context) => DetalisPage(),
+      },
+      // home: MenuPage(),
     );
   }
 }

@@ -1,6 +1,6 @@
-import 'package:ecommerce/designs/images.dart';
 import 'package:flutter/material.dart';
 
+import '../../designs/images.dart';
 import '../../designs/colors.dart';
 import '../../designs/styles.dart';
 import 'widgets/widgets.dart';
@@ -39,19 +39,21 @@ class _MenuPageState extends State<MenuPage> {
           ],
         ),
       ),
-      body: ListView(
-        padding: EdgeInsets.all(15),
-        children: [
-          Column(
-            spacing: 30,
-            children: <Widget>[
-              SelectCategory(),
-              SearchBarWidget(),
-              HotSales(),
-              BestSeller(),
-            ],
-          ),
-        ],
+      body: SafeArea(
+        child: ListView(
+          padding: EdgeInsets.all(15),
+          children: [
+            Column(
+              spacing: 30,
+              children: <Widget>[
+                SelectCategory(),
+                SearchBarWidget(),
+                HotSales(),
+                BestSeller(),
+              ],
+            ),
+          ],
+        ),
       ),
       bottomNavigationBar: Container(
         height: 70,
