@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../designs/images.dart';
-import '../../designs/colors.dart';
-import '../../designs/styles.dart';
+import '../../../designs/designs.dart';
 import 'widgets/widgets.dart';
 
 class MenuPage extends StatefulWidget {
@@ -58,7 +56,7 @@ class _MenuPageState extends State<MenuPage> {
       bottomNavigationBar: Container(
         height: 70,
         decoration: BoxDecoration(
-          color: primaryColor,
+          color: darkBlueColor,
           borderRadius: BorderRadius.only(
             topRight: Radius.circular(30),
             topLeft: Radius.circular(30),

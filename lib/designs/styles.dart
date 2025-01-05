@@ -7,7 +7,7 @@ const TextStyle appBarTextStyle = TextStyle(
   fontSize: 15,
   fontFamily: 'MarkPro',
   letterSpacing: -0.33,
-  color: primaryColor,
+  color: darkBlueColor,
 );
 
 const TextStyle headTextStyle = TextStyle(
@@ -15,7 +15,7 @@ const TextStyle headTextStyle = TextStyle(
   fontSize: 25,
   fontFamily: 'MarkPro',
   letterSpacing: -0.33,
-  color: primaryColor,
+  color: darkBlueColor,
 );
 
 const TextStyle bodyTextStyle = TextStyle(
@@ -23,7 +23,7 @@ const TextStyle bodyTextStyle = TextStyle(
   fontSize: 15,
   fontFamily: 'MarkPro',
   letterSpacing: -0.33,
-  color: secondaryColor,
+  color: lightOrangeColor,
 );
 
 const TextStyle categoryTextStyle = TextStyle(
@@ -31,7 +31,7 @@ const TextStyle categoryTextStyle = TextStyle(
   fontSize: 12,
   fontFamily: 'MarkPro',
   letterSpacing: -0.33,
-  color: secondaryColor,
+  color: lightOrangeColor,
 );
 
 const TextStyle headSaleTextStyle = TextStyle(
@@ -50,11 +50,19 @@ const TextStyle bodySaleTextStyle = TextStyle(
   letterSpacing: -0.33,
 );
 
-const TextStyle buttonTextStyle = TextStyle(
+const TextStyle button1TextStyle = TextStyle(
   fontSize: 12,
   fontWeight: FontWeight.w700,
-  color: primaryColor,
+  color: darkBlueColor,
   letterSpacing: -0.33,
+);
+
+const TextStyle button2TextStyle = TextStyle(
+  fontFamily: 'MarkPro',
+  fontWeight: FontWeight.w700,
+  fontSize: 20,
+  letterSpacing: -0.33,
+  color: otherColor,
 );
 
 const TextStyle newPriceTextStyle = TextStyle(
@@ -62,7 +70,7 @@ const TextStyle newPriceTextStyle = TextStyle(
   letterSpacing: -0.33,
   fontWeight: FontWeight.w700,
   fontFamily: 'MarkPro',
-  color: primaryColor,
+  color: darkBlueColor,
 );
 
 const TextStyle oldPriceTextStyle = TextStyle(
@@ -79,5 +87,40 @@ const TextStyle descProductTextStyle = TextStyle(
   letterSpacing: -0.33,
   fontWeight: FontWeight.w500,
   fontFamily: 'MarkPro',
-  color: primaryColor,
+  color: darkBlueColor,
+);
+
+const TextStyle titleProductDetalisTextStyle = TextStyle(
+  fontFamily: 'MarkPro',
+  fontWeight: FontWeight.w500,
+  fontSize: 18,
+  letterSpacing: -0.33,
+);
+
+const TextStyle nameProductDelatisTextStyle = TextStyle(
+  fontFamily: 'MarkPro',
+  fontWeight: FontWeight.w500,
+  fontSize: 24,
+  letterSpacing: -0.33,
+);
+
+const TextStyle selectedProductDelatisTextStyle = TextStyle(
+  fontFamily: 'MarkPro',
+  fontWeight: FontWeight.w700,
+  fontSize: 20,
+  letterSpacing: -0.33,
+);
+
+const TextStyle unselectedProductDelatisTextStyle = TextStyle(
+  fontFamily: 'MarkPro',
+  fontWeight: FontWeight.w400,
+  fontSize: 20,
+  letterSpacing: -0.33,
+);
+
+const TextStyle descProductDelatisTextStyle = TextStyle(
+  fontFamily: 'MarkPro',
+  fontWeight: FontWeight.w400,
+  fontSize: 11,
+  color: Color(0xFFB7B7B7),
 );

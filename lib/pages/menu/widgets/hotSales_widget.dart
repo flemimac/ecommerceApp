@@ -1,7 +1,6 @@
-import 'package:ecommerce/designs/colors.dart';
 import 'package:flutter/material.dart';
 
-import '../../../designs/styles.dart';
+import '../../../designs/designs.dart';
 
 class HotSales extends StatelessWidget {
   const HotSales({super.key});
@@ -49,7 +48,7 @@ class HotSales extends StatelessWidget {
                     width: 35,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
-                      color: secondaryColor,
+                      color: lightOrangeColor,
                     ),
                     child: Center(
                       child: Text(
@@ -96,7 +95,7 @@ class HotSales extends StatelessWidget {
                       ),
                       child: Text(
                         'Buy now!',
-                        style: buttonTextStyle,
+                        style: button1TextStyle,
                       ),
                     ),
                   )

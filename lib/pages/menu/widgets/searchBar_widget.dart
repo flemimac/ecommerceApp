@@ -1,7 +1,6 @@
-import 'package:ecommerce/designs/images.dart';
 import 'package:flutter/material.dart';
 
-import '../../../designs/colors.dart';
+import '../../../designs/designs.dart';
 
 class SearchBarWidget extends StatelessWidget {
   const SearchBarWidget({super.key});
@@ -59,7 +58,7 @@ class SearchBarWidget extends StatelessWidget {
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(50),
-              color: secondaryColor,
+              color: lightOrangeColor,
             ),
             child: Center(child: qrCodeIcon),
           ),

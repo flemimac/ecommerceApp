@@ -1,6 +1,6 @@
-import 'package:ecommerce/pages/detalis/detalisPage.dart';
 import 'package:flutter/material.dart';
 
+import 'pages/detalis/detalisPage.dart';
 import 'pages/menu/menuPage.dart';
 
 void main() {

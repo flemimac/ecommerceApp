@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce/designs/images.dart';
-import '../../../designs/colors.dart';
-import '../../../designs/styles.dart';
+import '../../../designs/designs.dart';
 
 class SelectCategory extends StatelessWidget {
   const SelectCategory({super.key});
@@ -62,7 +60,7 @@ class SelectCategory extends StatelessWidget {
               width: 71,
               height: 71,
               decoration: BoxDecoration(
-                color: secondaryColor,
+                color: lightOrangeColor,
                 borderRadius: BorderRadius.circular(50),
                 boxShadow: [
                   BoxShadow(

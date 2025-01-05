@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../designs/images.dart';
-import '../../../designs/colors.dart';
-import '../../../designs/styles.dart';
+import '../../../designs/designs.dart';
 
 class BestSeller extends StatelessWidget {
   const BestSeller({super.key});
