@@ -11,7 +11,7 @@ class DetalisPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: backgroundColor,
       body: Column(
-        spacing: 30,
+        spacing: 25,
         children: [
           SafeArea(
             child: Row(

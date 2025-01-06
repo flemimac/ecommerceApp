@@ -18,7 +18,7 @@ class InfoPanel extends StatelessWidget {
           color: otherColor,
         ),
         child: Column(
-          spacing: 30,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             _name(),
             _info(),
@@ -73,7 +73,7 @@ class InfoPanel extends StatelessWidget {
 
   Widget _info() {
     return Column(
-      spacing: 30,
+      spacing: 15,
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
