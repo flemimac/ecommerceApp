@@ -86,3 +86,8 @@ final SvgPicture processorIcon =
 final SvgPicture ramIcon = SvgPicture.asset('assets/svg/ram-icon.svg');
 
 final SvgPicture checkIcon = SvgPicture.asset('assets/svg/check-icon.svg');
+
+final SvgPicture crossIcon = SvgPicture.asset('assets/svg/cross-icon.svg');
+
+final SvgPicture arrowDownIcon =
+    SvgPicture.asset('assets/svg/arrow-down-icon.svg');

@@ -11,85 +11,119 @@ class MenuPage extends StatefulWidget {
 }
 
 class _MenuPageState extends State<MenuPage> {
+  bool _isContainerVisible = false;
+
+  void _toggleContainer() {
+    setState(() {
+      _isContainerVisible = !_isContainerVisible;
+    });
+    print('toggle');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       backgroundColor: backgroundColor,
       appBar: AppBar(
         scrolledUnderElevation: 0,
         backgroundColor: backgroundColor,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          spacing: 8,
+        title: Stack(
           children: [
-            Icon(
-              Icons.location_on_outlined,
-              color: Color(0xFFFF6E4E),
-            ),
-            Text(
-              'Zihuatanejo, Gro',
-              style: appBarTextStyle,
-            ),
-            InkWell(
-              onTap: () {},
-              child: Icon(Icons.keyboard_arrow_down_outlined),
-            ),
-          ],
-        ),
-      ),
-      body: SafeArea(
-        child: ListView(
-          padding: EdgeInsets.all(15),
-          children: [
-            Column(
-              spacing: 30,
-              children: <Widget>[
-                SelectCategory(),
-                SearchBarWidget(),
-                HotSales(),
-                BestSeller(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              spacing: 8,
+              children: [
+                Icon(
+                  Icons.location_on_outlined,
+                  color: Color(0xFFFF6E4E),
+                ),
+                Text(
+                  'Zihuatanejo, Gro',
+                  style: appBarTextStyle,
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Icon(Icons.keyboard_arrow_down_outlined),
+                ),
               ],
             ),
+            Positioned(
+              right: 0,
+              child: InkWell(
+                borderRadius: BorderRadius.circular(50),
+                onTap: () {
+                  _toggleContainer();
+                },
+                child: Icon(Icons.filter_alt_outlined),
+              ),
+            ),
           ],
         ),
       ),
-      bottomNavigationBar: Container(
-        height: 70,
-        decoration: BoxDecoration(
-          color: darkBlueColor,
-          borderRadius: BorderRadius.only(
-            topRight: Radius.circular(30),
-            topLeft: Radius.circular(30),
+      body: Stack(
+        children: [
+          SafeArea(
+            child: ListView(
+              padding: EdgeInsets.all(15),
+              children: [
+                Column(
+                  spacing: 30,
+                  children: <Widget>[
+                    SelectCategory(),
+                    SearchBarWidget(),
+                    HotSales(),
+                    BestSeller(),
+                  ],
+                ),
+              ],
+            ),
           ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 75),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Explorer',
-                style: TextStyle(
-                    color: otherColor,
-                    fontWeight: FontWeight.w700,
-                    fontSize: 16,
-                    letterSpacing: -0.33),
+          Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child: Container(
+              height: 70,
+              decoration: BoxDecoration(
+                color: darkBlueColor,
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(30),
+                  topLeft: Radius.circular(30),
+                ),
               ),
-              InkWell(
-                onTap: () {},
-                child: bagIcon,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 75),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Explorer',
+                      style: TextStyle(
+                          color: otherColor,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 16,
+                          letterSpacing: -0.33),
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      child: bagIcon,
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      child: heartOutlinedBottomNavIcon,
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      child: mineIcon,
+                    ),
+                  ],
+                ),
               ),
-              InkWell(
-                onTap: () {},
-                child: heartOutlinedBottomNavIcon,
-              ),
-              InkWell(
-                onTap: () {},
-                child: mineIcon,
-              ),
-            ],
+            ),
           ),
-        ),
+          if (_isContainerVisible) FilterWidget(onToggle: _toggleContainer),
+        ],
       ),
     );
   }

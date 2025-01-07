@@ -19,7 +19,7 @@ class DetalisPage extends StatelessWidget {
               children: [
                 InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, '/');
+                    Navigator.pop(context);
                   },
                   child: Container(
                     height: 37,
