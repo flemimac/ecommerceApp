@@ -15,6 +15,12 @@ class FilterWidget extends StatefulWidget {
 }
 
 class _FilterWidgetState extends State<FilterWidget> {
+  String brandDropDownValue = 'Samsung';
+
+  String priceDropDownValue = '\$100 - \$200';
+
+  String sizeDropDownValue = '4.5 to 5.5 inches';
+
   @override
   Widget build(BuildContext context) {
     var brandItems = [
@@ -25,8 +31,6 @@ class _FilterWidgetState extends State<FilterWidget> {
       'Nokia',
     ];
 
-    String brandDropDownValue = 'Samsung';
-
     var priceItems = [
       '\$100 - \$200',
       '\$200 - \$300',
@@ -34,15 +38,11 @@ class _FilterWidgetState extends State<FilterWidget> {
       '\$400 - \$500',
     ];
 
-    String priceDropDownValue = '\$100 - \$200';
-
     var sizeItems = [
       '4.5 to 5.5 inches',
       '6.5 to 6.5 inches',
       '6.5 to 7.5 inches',
     ];
-
-    String sizeDropDownValue = '4.5 to 5.5 inches';
 
     return Stack(
       children: [
@@ -62,6 +62,13 @@ class _FilterWidgetState extends State<FilterWidget> {
           bottom: 0,
           child: Container(
             decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.3),
+                  spreadRadius: 0.5,
+                  blurRadius: 20,
+                ),
+              ],
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(30),
                 topRight: Radius.circular(30),
@@ -75,15 +82,20 @@ class _FilterWidgetState extends State<FilterWidget> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      height: 37,
-                      width: 37,
-                      decoration: BoxDecoration(
-                        color: darkBlueColor,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Center(
-                        child: crossIcon,
+                    InkWell(
+                      onTap: () {
+                        widget.onToggle();
+                      },
+                      child: Container(
+                        height: 37,
+                        width: 37,
+                        decoration: BoxDecoration(
+                          color: darkBlueColor,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Center(
+                          child: crossIcon,
+                        ),
                       ),
                     ),
                     Text(
@@ -95,22 +107,27 @@ class _FilterWidgetState extends State<FilterWidget> {
                         letterSpacing: -0.33,
                       ),
                     ),
-                    Container(
-                      height: 37,
-                      width: 86,
-                      decoration: BoxDecoration(
-                        color: lightOrangeColor,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'Done',
-                          style: TextStyle(
-                            fontFamily: 'MarkPro',
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18,
-                            letterSpacing: -0.33,
-                            color: Colors.white,
+                    InkWell(
+                      onTap: () {
+                        widget.onToggle();
+                      },
+                      child: Container(
+                        height: 37,
+                        width: 86,
+                        decoration: BoxDecoration(
+                          color: lightOrangeColor,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Done',
+                            style: TextStyle(
+                              fontFamily: 'MarkPro',
+                              fontWeight: FontWeight.w500,
+                              fontSize: 18,
+                              letterSpacing: -0.33,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ),
