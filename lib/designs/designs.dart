@@ -1,3 +1,3 @@
 export 'colors.dart';
-export 'images.dart';
+export 'svg.dart';
 export 'styles.dart';

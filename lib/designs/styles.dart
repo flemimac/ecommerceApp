@@ -130,7 +130,15 @@ const TextStyle buttonProductDetalisTextStyle = TextStyle(
   color: otherColor,
 );
 
-// Styles for MyCar
+// Styles for MyCart
+const TextStyle headMyCartTextStyle = TextStyle(
+  fontFamily: 'MarkPro',
+  fontWeight: FontWeight.w700,
+  fontSize: 35,
+  letterSpacing: -0.33,
+  color: darkBlueColor,
+);
+
 const TextStyle titleMyCartTextStyle = TextStyle(
   fontFamily: 'MarkPro',
   fontWeight: FontWeight.w500,
@@ -184,4 +192,36 @@ const TextStyle buttonMyCartTextStyle = TextStyle(
   fontSize: 20,
   letterSpacing: -0.33,
   color: Colors.white,
+);
+
+// Styles for MyFavorites
+const TextStyle headMyFavoritesTextStyle = TextStyle(
+  fontFamily: 'MarkPro',
+  fontWeight: FontWeight.w700,
+  fontSize: 35,
+  letterSpacing: -0.33,
+  color: darkBlueColor,
+);
+
+const TextStyle titleMyFavoritesTextStyle = TextStyle(
+  fontFamily: 'MarkPro',
+  fontWeight: FontWeight.w500,
+  fontSize: 15,
+  letterSpacing: -0.33,
+);
+
+const TextStyle titleItemMyFavoritesTextStyle = TextStyle(
+  fontFamily: 'MarkPro',
+  fontWeight: FontWeight.w500,
+  fontSize: 20,
+  letterSpacing: -0.33,
+  color: Colors.white,
+);
+
+const TextStyle priceItemMyFavoritesTextStyle = TextStyle(
+  fontFamily: 'MarkPro',
+  fontWeight: FontWeight.w500,
+  fontSize: 20,
+  letterSpacing: -0.33,
+  color: lightOrangeColor,
 );

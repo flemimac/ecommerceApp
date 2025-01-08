@@ -112,7 +112,9 @@ class _MenuPageState extends State<MenuPage> {
                       child: bagIcon,
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, '/myfavorites');
+                      },
                       child: heartOutlinedBottomNavIcon,
                     ),
                     InkWell(

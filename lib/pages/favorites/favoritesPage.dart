@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../designs/designs.dart';
 import 'widgets/widgets.dart';
 
-class CartPage extends StatelessWidget {
-  const CartPage({super.key});
+class FavoritesPage extends StatelessWidget {
+  const FavoritesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,12 +14,12 @@ class CartPage extends StatelessWidget {
         spacing: 45,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          AppBarCart(),
+          AppBarFavorites(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 42),
             child: Text(
-              'My Cart',
-              style: headMyCartTextStyle,
+              'My Favorites',
+              style: headMyFavoritesTextStyle,
             ),
           ),
           Expanded(
@@ -46,24 +46,6 @@ class CartPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Divider(
-                    color: Colors.white.withOpacity(0.25),
-                    thickness: 2,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 35, vertical: 10),
-                    child: InfoCart(),
-                  ),
-                  Divider(
-                    color: Colors.white.withOpacity(0.2),
-                    thickness: 1,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 44, vertical: 20),
-                    child: ButtonCart(),
-                  )
                 ],
               ),
             ),

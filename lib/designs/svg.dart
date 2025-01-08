@@ -1,9 +1,9 @@
 // ignore_for_file: deprecated_member_use
 
-import 'package:ecommerce/designs/colors.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter_svg/flutter_svg.dart';
+
+import 'designs.dart';
 
 final SvgPicture bagIcon = SvgPicture.asset(
   'assets/svg/bag-icon.svg',
@@ -97,7 +97,10 @@ final SvgPicture crossIcon = SvgPicture.asset('assets/svg/cross-icon.svg');
 final SvgPicture arrowDownIcon =
     SvgPicture.asset('assets/svg/arrow-down-icon.svg');
 
-final SvgPicture crashIcon = SvgPicture.asset('assets/svg/crash-icon.svg');
+final SvgPicture crashIcon = SvgPicture.asset(
+  'assets/svg/crash-icon.svg',
+  color: otherColor,
+);
 
 final SvgPicture minusIcon = SvgPicture.asset('assets/svg/minus-icon.svg');
 
