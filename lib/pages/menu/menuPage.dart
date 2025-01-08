@@ -106,7 +106,9 @@ class _MenuPageState extends State<MenuPage> {
                           letterSpacing: -0.33),
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, '/mycart');
+                      },
                       child: bagIcon,
                     ),
                     InkWell(

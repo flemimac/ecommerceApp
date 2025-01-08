@@ -27,6 +27,11 @@ final SvgPicture healthIcon = SvgPicture.asset(
 
 final SvgPicture geoIcon = SvgPicture.asset('assets/svg/geo-icon.svg');
 
+final SvgPicture geoWhiteIcon = SvgPicture.asset(
+  'assets/svg/geo-icon.svg',
+  color: Colors.white,
+);
+
 final SvgPicture heartIcon = SvgPicture.asset(
   'assets/svg/heart-icon.svg',
   height: 12,
@@ -91,3 +96,9 @@ final SvgPicture crossIcon = SvgPicture.asset('assets/svg/cross-icon.svg');
 
 final SvgPicture arrowDownIcon =
     SvgPicture.asset('assets/svg/arrow-down-icon.svg');
+
+final SvgPicture crashIcon = SvgPicture.asset('assets/svg/crash-icon.svg');
+
+final SvgPicture minusIcon = SvgPicture.asset('assets/svg/minus-icon.svg');
+
+final SvgPicture plusIcon = SvgPicture.asset('assets/svg/plus-icon.svg');
