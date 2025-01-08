@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 
 import '../../../designs/designs.dart';
@@ -38,24 +40,12 @@ class ItemList extends StatelessWidget {
                   child: Text(
                     'Galaxy Note 20 Ultra',
                     overflow: TextOverflow.clip,
-                    style: TextStyle(
-                      fontFamily: 'MarkPro',
-                      fontWeight: FontWeight.w500,
-                      fontSize: 20,
-                      letterSpacing: -0.33,
-                      color: Colors.white,
-                    ),
+                    style: titleItemMyCartTextStyle,
                   ),
                 ),
                 Text(
                   '\$3000.00',
-                  style: TextStyle(
-                    fontFamily: 'MarkPro',
-                    fontWeight: FontWeight.w500,
-                    fontSize: 20,
-                    letterSpacing: -0.33,
-                    color: lightOrangeColor,
-                  ),
+                  style: priceItemMyCartTextStyle,
                 ),
               ],
             ),
@@ -79,13 +69,7 @@ class ItemList extends StatelessWidget {
                 ),
                 Text(
                   '2',
-                  style: TextStyle(
-                    fontFamily: 'MarkPro',
-                    fontWeight: FontWeight.w500,
-                    fontSize: 20,
-                    letterSpacing: -0.33,
-                    color: Colors.white,
-                  ),
+                  style: counterItemMyCartTextStyle,
                 ),
                 InkWell(
                   onTap: () {

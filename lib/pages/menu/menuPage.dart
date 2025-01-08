@@ -40,7 +40,7 @@ class _MenuPageState extends State<MenuPage> {
                 ),
                 Text(
                   'Zihuatanejo, Gro',
-                  style: appBarTextStyle,
+                  style: appBarMenuTextStyle,
                 ),
                 InkWell(
                   onTap: () {},

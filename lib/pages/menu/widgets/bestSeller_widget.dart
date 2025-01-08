@@ -15,11 +15,15 @@ class BestSeller extends StatelessWidget {
           children: [
             Text(
               'Best Seller',
-              style: headTextStyle,
+              style: headMenuTextStyle,
             ),
-            Text(
-              'see more',
-              style: bodyTextStyle,
+            InkWell(
+              borderRadius: BorderRadius.circular(10),
+              onTap: () {},
+              child: Text(
+                'see more',
+                style: bodyMenuTextStyle,
+              ),
             ),
           ],
         ),

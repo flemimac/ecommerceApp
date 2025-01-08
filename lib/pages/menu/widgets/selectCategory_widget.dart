@@ -15,14 +15,14 @@ class SelectCategory extends StatelessWidget {
           children: [
             Text(
               'Select Category',
-              style: headTextStyle,
+              style: headMenuTextStyle,
             ),
             InkWell(
               borderRadius: BorderRadius.circular(10),
               onTap: () {},
               child: Text(
                 'view all',
-                style: bodyTextStyle,
+                style: bodyMenuTextStyle,
               ),
             ),
           ],
@@ -76,7 +76,7 @@ class SelectCategory extends StatelessWidget {
           ),
           Text(
             'Phones',
-            style: categoryTextStyle,
+            style: itemCategoryTextStyle,
           )
         ],
       ),

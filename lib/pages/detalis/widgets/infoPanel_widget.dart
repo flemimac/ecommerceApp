@@ -260,11 +260,11 @@ class InfoPanel extends StatelessWidget {
           children: [
             Text(
               'Add to Cart',
-              style: button2TextStyle,
+              style: buttonProductDetalisTextStyle,
             ),
             Text(
               '\$1,500.00',
-              style: button2TextStyle,
+              style: buttonProductDetalisTextStyle,
             ),
           ],
         ),

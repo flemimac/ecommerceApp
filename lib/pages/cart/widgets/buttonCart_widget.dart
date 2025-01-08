@@ -16,13 +16,7 @@ class ButtonCart extends StatelessWidget {
       child: Center(
         child: Text(
           'Checkout',
-          style: TextStyle(
-            fontFamily: 'MarkPro',
-            fontWeight: FontWeight.w700,
-            fontSize: 20,
-            letterSpacing: -0.33,
-            color: Colors.white,
-          ),
+          style: buttonMyCartTextStyle,
         ),
       ),
     );

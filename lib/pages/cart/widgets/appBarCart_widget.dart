@@ -37,7 +37,7 @@ class AppBarCart extends StatelessWidget {
               children: [
                 Text(
                   'Add address',
-                  style: titleProductDetalisTextStyle,
+                  style: titleMyCartTextStyle,
                 ),
                 InkWell(
                   onTap: () {},

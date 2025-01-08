@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../designs/designs.dart';
+
 class InfoCart extends StatelessWidget {
   const InfoCart({super.key});
 
@@ -14,23 +16,11 @@ class InfoCart extends StatelessWidget {
           children: [
             Text(
               'Total',
-              style: TextStyle(
-                fontFamily: 'MarkPro',
-                fontWeight: FontWeight.w400,
-                fontSize: 15,
-                letterSpacing: -0.33,
-                color: Colors.white,
-              ),
+              style: infoTitleMyCartTextStyle,
             ),
             Text(
               'Delivery',
-              style: TextStyle(
-                fontFamily: 'MarkPro',
-                fontWeight: FontWeight.w400,
-                fontSize: 15,
-                letterSpacing: -0.33,
-                color: Colors.white,
-              ),
+              style: infoTitleMyCartTextStyle,
             ),
           ],
         ),
@@ -40,23 +30,11 @@ class InfoCart extends StatelessWidget {
           children: [
             Text(
               '\$6,000 us',
-              style: TextStyle(
-                fontFamily: 'MarkPro',
-                fontWeight: FontWeight.w700,
-                fontSize: 15,
-                letterSpacing: -0.33,
-                color: Colors.white,
-              ),
+              style: infoValueMyCartTextStyle,
             ),
             Text(
               'Free',
-              style: TextStyle(
-                fontFamily: 'MarkPro',
-                fontWeight: FontWeight.w700,
-                fontSize: 15,
-                letterSpacing: -0.33,
-                color: Colors.white,
-              ),
+              style: infoValueMyCartTextStyle,
             ),
           ],
         )
