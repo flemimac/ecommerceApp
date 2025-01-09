@@ -10,6 +10,11 @@ final SvgPicture bagIcon = SvgPicture.asset(
   color: otherColor,
 );
 
+final SvgPicture phonesIcon = SvgPicture.asset(
+  'assets/svg/phones-icon.svg',
+  color: otherColor,
+);
+
 final SvgPicture booksIcon = SvgPicture.asset(
   'assets/svg/books-icon.svg',
   color: otherColor,
@@ -22,7 +27,7 @@ final SvgPicture computerIcon = SvgPicture.asset(
 
 final SvgPicture healthIcon = SvgPicture.asset(
   'assets/svg/health-icon.svg',
-  color: otherColor,
+  color: Colors.white,
 );
 
 final SvgPicture geoIcon = SvgPicture.asset('assets/svg/geo-icon.svg');
@@ -60,11 +65,6 @@ final SvgPicture heartOutlinedBottomNavIcon = SvgPicture.asset(
 
 final SvgPicture mineIcon = SvgPicture.asset(
   'assets/svg/mine-icon.svg',
-  color: otherColor,
-);
-
-final SvgPicture phonesIcon = SvgPicture.asset(
-  'assets/svg/phones-icon.svg',
   color: otherColor,
 );
 

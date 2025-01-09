@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
 import '../../../designs/designs.dart';
+import '../../../models/category.dart';
 
 class SelectCategory extends StatelessWidget {
-  const SelectCategory({super.key});
+  SelectCategory({super.key});
+
+  final categoryList = Category.categoryList();
 
   @override
   Widget build(BuildContext context) {
@@ -32,15 +35,7 @@ class SelectCategory extends StatelessWidget {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: <Widget>[
-              _listItem(),
-              _listItem(),
-              _listItem(),
-              _listItem(),
-              _listItem(),
-              _listItem(),
-              _listItem(),
-              _listItem(),
-              _listItem(),
+              for (Category category in categoryList) _listItem(category),
             ],
           ),
         ),
@@ -48,7 +43,7 @@ class SelectCategory extends StatelessWidget {
     );
   }
 
-  Widget _listItem() {
+  Widget _listItem(Category category) {
     return Padding(
       padding: const EdgeInsets.only(right: 23),
       child: Column(
@@ -71,11 +66,11 @@ class SelectCategory extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Center(child: phonesIcon),
+              child: Center(child: category.icon),
             ),
           ),
           Text(
-            'Phones',
+            category.name,
             style: itemCategoryTextStyle,
           )
         ],
