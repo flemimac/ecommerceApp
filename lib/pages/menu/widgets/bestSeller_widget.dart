@@ -2,8 +2,22 @@ import 'package:flutter/material.dart';
 
 import '../../../designs/designs.dart';
 
-class BestSeller extends StatelessWidget {
+class BestSeller extends StatefulWidget {
   const BestSeller({super.key});
+
+  @override
+  State<BestSeller> createState() => _BestSellerState();
+}
+
+class _BestSellerState extends State<BestSeller> {
+  List<bool> flagFavorites = List.generate(4, (index) => false);
+
+  void _flagToogle(int index) {
+    setState(() {
+      flagFavorites[index] = !flagFavorites[index];
+    });
+    print('flag toogle');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,17 +45,17 @@ class BestSeller extends StatelessWidget {
           spacing: 15,
           runSpacing: 15,
           children: [
-            _gridTile(context),
-            _gridTile(context),
-            _gridTile(context),
-            _gridTile(context),
+            _gridTile(context, 0),
+            _gridTile(context, 1),
+            _gridTile(context, 2),
+            _gridTile(context, 3),
           ],
         ),
       ],
     );
   }
 
-  Widget _gridTile(BuildContext context) {
+  Widget _gridTile(BuildContext context, int index) {
     return Container(
       padding: const EdgeInsets.all(10),
       height: 227,
@@ -112,9 +126,12 @@ class BestSeller extends StatelessWidget {
                       ]),
                   child: InkWell(
                     borderRadius: BorderRadius.circular(50),
-                    onTap: () {},
+                    onTap: () {
+                      _flagToogle(index);
+                    },
                     child: Center(
-                      child: heartOutlinedIcon,
+                      child:
+                          flagFavorites[index] ? heartIcon : heartOutlinedIcon,
                     ),
                   )),
             ),
