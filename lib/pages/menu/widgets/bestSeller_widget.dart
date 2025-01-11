@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../designs/designs.dart';
+import '../../../models/phone.dart';
 
 class BestSeller extends StatefulWidget {
   const BestSeller({super.key});
@@ -10,13 +11,13 @@ class BestSeller extends StatefulWidget {
 }
 
 class _BestSellerState extends State<BestSeller> {
-  List<bool> flagFavorites = List.generate(4, (index) => false);
+  final phoneList = Phone.phoneList();
 
-  void _flagToogle(int index) {
+  void _flagToggle(Phone phone) {
     setState(() {
-      flagFavorites[index] = !flagFavorites[index];
+      phone.isFavorite = !phone.isFavorite;
     });
-    print('flag toogle');
+    print('flag toggle');
   }
 
   @override
@@ -44,18 +45,16 @@ class _BestSellerState extends State<BestSeller> {
         Wrap(
           spacing: 15,
           runSpacing: 15,
-          children: [
-            _gridTile(context, 0),
-            _gridTile(context, 1),
-            _gridTile(context, 2),
-            _gridTile(context, 3),
-          ],
+          children: [for (Phone phone in phoneList) _gridTile(context, phone)],
         ),
+        SizedBox(
+          height: 60,
+        )
       ],
     );
   }
 
-  Widget _gridTile(BuildContext context, int index) {
+  Widget _gridTile(BuildContext context, Phone phone) {
     return Container(
       padding: const EdgeInsets.all(10),
       height: 227,
@@ -79,7 +78,7 @@ class _BestSellerState extends State<BestSeller> {
         },
         child: Stack(
           children: [
-            Image.asset('assets/images/samsungGalaxyS20.png'),
+            phone.image,
             Positioned(
               bottom: 0,
               child: Column(
@@ -91,17 +90,17 @@ class _BestSellerState extends State<BestSeller> {
                     spacing: 7,
                     children: [
                       Text(
-                        '\$1,047',
+                        phone.newPrice,
                         style: newPriceTextStyle,
                       ),
                       Text(
-                        '\$1,500',
+                        phone.oldPrice,
                         style: oldPriceTextStyle,
                       ),
                     ],
                   ),
                   Text(
-                    'Samsung Galaxy s20 Ultra',
+                    phone.name,
                     style: descProductTextStyle,
                   )
                 ],
@@ -111,29 +110,30 @@ class _BestSellerState extends State<BestSeller> {
               top: 5,
               right: 5,
               child: Container(
-                  height: 35,
-                  width: 35,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      color: otherColor,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.3),
-                          spreadRadius: 0.5,
-                          blurRadius: 5,
-                          offset: Offset(0, 2),
-                        ),
-                      ]),
-                  child: InkWell(
-                    borderRadius: BorderRadius.circular(50),
-                    onTap: () {
-                      _flagToogle(index);
-                    },
-                    child: Center(
-                      child:
-                          flagFavorites[index] ? heartIcon : heartOutlinedIcon,
+                height: 35,
+                width: 35,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  color: otherColor,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.3),
+                      spreadRadius: 0.5,
+                      blurRadius: 5,
+                      offset: Offset(0, 2),
                     ),
-                  )),
+                  ],
+                ),
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(50),
+                  onTap: () {
+                    _flagToggle(phone);
+                  },
+                  child: Center(
+                    child: phone.isFavorite ? heartIcon : heartOutlinedIcon,
+                  ),
+                ),
+              ),
             ),
           ],
         ),
