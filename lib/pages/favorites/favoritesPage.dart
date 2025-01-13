@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 import '../../designs/designs.dart';
+import '../../models/phone.dart';
 import 'widgets/widgets.dart';
 
 class FavoritesPage extends StatelessWidget {
-  const FavoritesPage({super.key});
+  final List phoneList = Phone.phoneList();
+  FavoritesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -40,8 +42,11 @@ class FavoritesPage extends StatelessWidget {
                       child: ListView(
                         padding: EdgeInsets.all(0),
                         children: [
-                          ItemList(),
-                          ItemList(),
+                          for (Phone phone in phoneList)
+                            if (phone.isFavorite)
+                              ItemList(
+                                phone: phone,
+                              )
                         ],
                       ),
                     ),

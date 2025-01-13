@@ -11,13 +11,17 @@ class BestSeller extends StatefulWidget {
 }
 
 class _BestSellerState extends State<BestSeller> {
-  final phoneList = Phone.phoneList();
+  List<Phone> phoneList = Phone.phoneList();
 
   void _flagToggle(Phone phone) {
     setState(() {
       phone.isFavorite = !phone.isFavorite;
     });
     print('flag toggle');
+    // for (var p in phoneList) {
+    //   print(p.name);
+    //   print(p.isFavorite);
+    // }
   }
 
   @override

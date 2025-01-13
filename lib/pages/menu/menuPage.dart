@@ -14,9 +14,8 @@ class _MenuPageState extends State<MenuPage> {
   bool _isContainerVisible = false;
 
   void _toggleContainer() {
-    setState(() {
-      _isContainerVisible = !_isContainerVisible;
-    });
+    _isContainerVisible = !_isContainerVisible;
+
     print('toggle');
   }
 

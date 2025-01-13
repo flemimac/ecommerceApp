@@ -3,9 +3,14 @@
 import 'package:flutter/material.dart';
 
 import '../../../designs/designs.dart';
+import '../../../models/phone.dart';
 
 class ItemList extends StatelessWidget {
-  const ItemList({super.key});
+  final Phone phone;
+  const ItemList({
+    super.key,
+    required this.phone,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +28,7 @@ class ItemList extends StatelessWidget {
               color: Colors.white,
             ),
             child: ClipRRect(
-              child: Image.asset(
-                'assets/images/samsungUltra-small.png',
-                fit: BoxFit.cover,
-              ),
+              child: phone.image,
             ),
           ),
           SizedBox(
@@ -38,13 +40,13 @@ class ItemList extends StatelessWidget {
                 SizedBox(
                   height: 50,
                   child: Text(
-                    'Galaxy Note 20 Ultra',
+                    phone.name,
                     overflow: TextOverflow.clip,
                     style: titleItemMyFavoritesTextStyle,
                   ),
                 ),
                 Text(
-                  '\$3000.00',
+                  phone.newPrice,
                   style: priceItemMyFavoritesTextStyle,
                 ),
               ],
